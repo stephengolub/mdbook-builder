@@ -1,0 +1,37 @@
+# Git files
+.git
+.gitignore
+
+# GitHub files
+.github/
+
+# Documentation
+README.md
+LICENSE
+
+# Build outputs
+book/
+target/
+
+# Scripts
+*.sh
+
+# Test files
+test-*
+*-test
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Docker files (prevent recursion)
+.dockerignore
+docker-compose.yml
+docker-compose.yaml
