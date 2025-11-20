@@ -1,5 +1,5 @@
 # Multi-stage build for smaller final image
-FROM rust:1.74-bookworm as builder
+FROM rust:1.91-bookworm as builder
 
 # Set cargo install root
 ENV CARGO_INSTALL_ROOT=/usr/local/cargo
@@ -18,7 +18,7 @@ RUN --mount=type=cache,target=/usr/local/cargo/registry \
     cargo install --locked \
     mdbook-toc --version 0.15.1 && \
     cargo install --locked \
-    mdbook-mermaid --version 0.17.0 && \
+    mdbook-mermaid --version 0.16.2 && \
     cargo install --locked \
     mdbook-pagetoc --version 0.2.2 && \
     cargo install --locked \
