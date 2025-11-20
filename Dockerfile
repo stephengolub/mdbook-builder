@@ -13,19 +13,19 @@ RUN apt-get update && apt-get install -y \
 # Install mdbook and plugins with specific versions for reproducibility
 RUN --mount=type=cache,target=/usr/local/cargo/registry \
     --mount=type=cache,target=/usr/local/cargo/git \
-    cargo install --locked \
+    cargo install \
     mdbook --version 0.5.1 && \
-    cargo install --locked \
+    cargo install \
     mdbook-toc --version 0.15.1 && \
-    cargo install --locked \
+    cargo install \
     mdbook-mermaid --version 0.16.2 && \
-    cargo install --locked \
+    cargo install \
     mdbook-pagetoc --version 0.2.2 && \
-    cargo install --locked \
+    cargo install \
     mdbook-footnote --version 0.1.1 && \
-    cargo install --locked \
+    cargo install \
     mdbook-frontmatter --version 0.0.4 && \
-    cargo install --locked \
+    cargo install \
     mdbook-obsidian --version 0.1.0
 
 # Final stage - smaller runtime image
